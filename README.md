@@ -1,2 +1,1 @@
-# ShopiAPI
-API GraphQL para conectar a Shopify 
+# Recoge los productos más vendidos de Shopify en el último mes.
