@@ -2,6 +2,7 @@ from src.accesoDatos import AccesoDatos
 import os
 import pandas as pd
 from pathlib import Path
+from src.ia import Analista
 
 def procesar_datos(json_respuesta):
     """
@@ -60,5 +61,10 @@ def iniciar_programa():
                 
         print("Guardando Registro...")
         json_CSV(top_ventas)
+
+        print("\n Análisis Inteligente:")
+        conclusion=Analista.generar_resumen_ventas(top_ventas)
+
+        print(conclusion)
     except Exception as e:
         print(f"Ocurrió un error inesperado: {e}")
